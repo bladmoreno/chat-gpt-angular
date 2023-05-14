@@ -1,0 +1,14 @@
+<div class="chat-container mat-typography">
+    <mat-card class="chat-message" *ngFor="let chat of chatHistory" [ngClass]="chat.sender">
+      <mat-card-content>
+        {{chat.message}}
+      </mat-card-content>
+    </mat-card>
+  
+    <div class="input-container">
+      <mat-form-field class="input-field">
+        <input matInput [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Type a message...">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
