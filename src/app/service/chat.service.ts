@@ -11,7 +11,7 @@ export class ChatService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer api-key'
     })
   };
 
